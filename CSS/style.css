@@ -18,7 +18,7 @@ body {
     max-width: 1440px;
 }
 
-#blocpage {
+#page {
     width: 95%;
     margin: auto;
 }
@@ -199,7 +199,7 @@ header {
     border: 2px solid #d9d9d9;
     border-radius: 25px;
     padding-right: 10px;
-    transition: 0.3s;
+    width: 164px;
 }
 
 .filters-types:hover {
@@ -224,17 +224,17 @@ header {
     height: 42px;
     margin: -2px;
     border-radius: 50%;
-    transition: 0.3s;
+  
 
 }
 
-.searchresults-numbers {
+.searchresults-count {
     display: flex;
     align-items: center;
     margin-top: 20px;
 }
 
-.searchresults-numbers .fa-info {
+.searchresults-count .fa-info {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -285,7 +285,7 @@ header {
     margin: 15px 0px;
     border-radius: 15px;
     box-shadow: 5px 5px 10px #DADADA;
-    transition: 0.3s;
+   
 }
 
 .hotel-card img {
@@ -343,7 +343,7 @@ header {
     border-radius: 15px;
     box-shadow: 5px 5px 10px #DADADA;
     margin: 0px 0px 30px 0px;
-    transition: 0.3s;
+    
 }
 
 .popularhotel-card:hover {
@@ -409,7 +409,7 @@ span {
     border-radius: 15px;
     box-shadow: 5px 5px 10px #DADADA;
     overflow: hidden;
-    transition: 0.3s;
+    
 }
 
 .activities-card h3 {
@@ -459,42 +459,265 @@ footer {
 
 /****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
-@media (max-width: 1024px) {
-    .hebergements-and-populaires {
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    #page {
+        width: 100%;
+    }
+
+    /* Tablet Search */
+    #search {
+        width: 100%;
+        padding: 0% 5%;
+    }
+
+    /* Tablet Most Popular */
+    #hotel-searchresults {
+        width: 100%;
         flex-direction: column;
+        justify-content: center;
     }
 
-    .hebergements {
+    #hotel-mostpopular {
         width: 100%;
+        display: flex;
+        flex-direction: column;
+        border-radius: 0px;
+        padding: 2% 5%;
+        margin-bottom: 5%;
     }
 
-    .populaires {
+    #popularhotel-title {
+        margin: 2% 0%;
+    }
+
+    .popularhotel-card {
         width: 100%;
-        margin-top: 50px;
+        max-height: 175px;
+        margin: 2% 0%;
     }
 
-    .populaires-cards {
+    .popularhotel-img {
+        width: 40%;
+        min-width: 40%;
+    }
+
+
+    /* Tablet Hotels Results */
+    #hotels-list {
+        width: 100%;
+        background-color: #ffffff;
+        border-radius: 0px;
+        padding: 0% 5%;
+    }
+
+    #hotels-list h2,
+    #hotels-list h4 {
+        width: 100%;
+        margin: 2% 0%;
+    }
+
+    #hotels-cardlist {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 0%;
+    }
+
+    .hotel-card {
+        margin: 2% 0%;
+    }
+
+    /* Tablet Activities Results */
+    #activities-searchresults {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        padding: 0% 5%;
+        margin-bottom: 0;
+    }
+
+    #activities-searchresults h2 {
+        margin-bottom: 4%;
+    }
+
+    #activities-list {
+        height: auto;
+        flex-wrap: wrap;
+        align-content: space-between;
+    }
+
+    
+
+    #activities-list :nth-child(3) {
+        order: 4;
+    }
+
+    /* Tablet Footer */
+    footer {
+        width: 100%;
+        padding: 5%;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        gap: 6%;
     }
 
-    .populaires-cards .card {
-        width: 30%;
+    .footer-menu {
+        width: 33%;
     }
 
-    .populaires-cards .card-title {
-        font-size: 14px;
-    }
-
-    .populaires-cards .card-subtitle {
-        font-size: 13px;
-    }
 }
 
-/* Small devices (phones, less than 768px) */
-@media (max-width: 767.98px) {
-    /* ... */
+/* ///////// Smartphones ///////// */
+@media   (max-width: 767.98px) {
+
+    #blocpage {
+        width: 100%;
+    }
+
+    /*  Smartphone Header */
+    header {
+        height: auto;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 5% 0% 10% 0%;
+    }
+
+    #menu-nav {
+        width: 100%;
+        text-align: center;
+    }
+
+    #menu-nav a {
+        width: 50%;
+        border-bottom: 2px solid #DADADA;
+    }
+
+    #menu-nav a:hover {
+        border-top: none;
+        padding-top: 30px;
+        border-bottom: 2px solid #0065FC;
+        color: #0065FC;
+    }
+
+    /*  Smartphone Search */
+    #search {
+        width: 100%;
+        padding: 0% 5%;
+    }
+
+    #location-input {
+        width: 90%;
+        min-width: 160px;
+        max-width: 350px;
+    }
+
+    #search-mobile {
+        display: flex;
+        position: relative;
+        right: 15px;
+        height: 37px;
+        color: #ffffff;
+        background-color: #0065FC;
+        border: none;
+        border-radius: 12px 12px 12px 12px;
+        font-weight: bold;
+        font-size: 16px;
+        padding: 9px 12px 9px 12px;
+        cursor: pointer;
+    }
+
+    #search-desktop {
+        display: none;
+    }
+
+    #filters {
+        width: 100%;
+    }
+
+    /* Smartphone Most Popular */
+    #hotel-searchresults {
+        width: 100%;
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+
+    #hotel-mostpopular {
+        width: 100%;
+        border-radius: 0px;
+        padding: 2% 5%;
+        margin-bottom: 5%;
+    }
+
+    .popularhotel-card {
+        margin: 5% 0%;
+    }
+
+    /* Smartphones Hotels Results */
+    #hotels-list {
+        width: 100%;
+        background-color: #ffffff;
+        border-radius: 0px;
+        padding: 0% 5%;
+    }
+
+    #hotels-list h2,
+    #hotels-list h4 {
+        margin: 2% 2% 2% 2%;
+    }
+
+    #hotels-cardlist {
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0;
+    }
+
+    .hotel-card {
+        width: auto;
+        margin: 3% 0;
+    }
+
+    /* Smartphone Activities Results */
+    #activities-searchresults {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 0% 5%;
+    }
+
+    #activities-list {
+        flex-direction: column;
+    }
+
+    .activities-card {
+        width: auto;
+        margin: 3% 0%;
+    }
+
+    
+    .activities {
+        width: 100%;
+    }
+
+   
+    .half55 {
+        height: 150px;
+    }
+
+    /* Smartphone Footer */
+    footer {
+        width: 100%;
+        padding: 5%;
+        flex-direction: column;
+    }
+
+    .footer-menu {
+        width: 100%;
+    }
+
 }
-
-
